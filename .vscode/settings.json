@@ -1,0 +1,82 @@
+{   
+    "python.pythonPath": "C:\\Users\\theppsh\\Anaconda3",
+    "workbench.colorTheme": "Solarized Light",
+    // "cmake.debugConfig": {
+    //     "miDebuggerPath": "C:\\cygwin64\\bin\\gdb.exe",
+    //     "externalConsole": true,   
+    //     "stopAtEntry": false   
+    // },
+    // "cmake.cmakePath": "D:\\software\\cmake-3.11.1-win64-x64\\bin\\cmake.exe",
+    // use cygwin terminal...
+    "terminal.integrated.shell.windows": "C:\\cygwin64\\bin\\bash.exe",
+    "terminal.integrated.env.windows": {
+        "CHERE_INVOKING": "1"
+    },
+    "terminal.integrated.shellArgs.windows": [
+        "--login",
+        "-i"
+    ],
+    "latex-workshop.latex.recipes": [
+        // {
+        //     "name": "latexmk",
+        //     "tools": [
+        //         "latexmk"
+        //     ]
+        // },
+        // {
+        //     "name": "pdflatex -> bibtex -> pdflatex*2",
+        //     "tools": [
+        //         "pdflatex",
+        //         "bibtex",
+        //         "pdflatex",
+        //         "pdflatex"
+        //     ]
+        // },
+        {
+            "name": "make build",
+            "tools": [
+                "make_tex"
+            ]
+        },
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "make_tex",
+            // "command": "C:\\cygwin64\\bin\\make",
+            "command": "make",
+            "isShellCommand": true,
+            "type":"shell",
+            "args": [
+                "main.pdf"
+            ]
+        }
+    ]
+}
